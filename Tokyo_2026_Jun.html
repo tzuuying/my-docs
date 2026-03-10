@@ -235,12 +235,71 @@
             transform: translateY(0px);
             box-shadow: 0 14px 26px rgba(45, 90, 39, .12);
         }
+
+        .photo-placeholder {
+            border: 1px dashed rgba(45, 90, 39, 0.22);
+            background: linear-gradient(135deg, rgba(232,240,230,.55), rgba(255,255,255,.95));
+            border-radius: 16px;
+            padding: .85rem 1rem;
+            margin-top: 1rem;
+            color: #4b5563;
+            font-size: 11px;
+            display: flex;
+            align-items: center;
+            gap: .5rem;
+        }
+
+        .mini-route {
+            background: rgba(255,255,255,.12);
+            border: 1px solid rgba(255,255,255,.22);
+            border-radius: 18px;
+            padding: .9rem 1rem;
+            margin-top: 1rem;
+            text-align: left;
+        }
+
+        .widget-card {
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 10px 25px rgba(45, 90, 39, 0.08);
+            border: 1px solid #e8f0e6;
+            overflow: hidden;
+        }
+
+        .progress-track {
+            width: 100%;
+            height: 10px;
+            background: #e5efe2;
+            border-radius: 999px;
+            overflow: hidden;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #2d5a27 0%, #6aa85f 100%);
+            border-radius: 999px;
+            transition: width .6s ease;
+        }
+
+        .map-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: .45rem;
+            padding: .35rem .65rem;
+            border-radius: 999px;
+            background: #f6faf5;
+            border: 1px solid #dce8d8;
+            color: #2d5a27;
+            font-size: 11px;
+            font-weight: 700;
+        }
+
     </style>
 </head>
 
 <body class="pb-16 text-gray-800">
 
-    <div class="forest-gradient text-white hero-padding p-12 text-center shadow-2xl mb-8 relative overflow-hidden">
+    <div class="forest-gradient text-white hero-padding p-10 text-center shadow-2xl mb-8 relative overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
             <i class="fas fa-tree text-9xl absolute -top-10 -left-10"></i>
             <i class="fas fa-leaf text-8xl absolute bottom-10 -right-10"></i>
@@ -248,23 +307,18 @@
 
         <h1 class="serif text-xl sm:text-xl font-bold mb-3 tracking-widest leading-tight">🌿 Moments Beyond the Map 🌿
         </h1>
-        <p class="text-green-100 opacity-80 text-xs sm:text-sm tracking-widest mb-3 uppercase">一段跨越城市與山的旅程，一次時間與記憶的收藏
+        <p class="text-green-100 opacity-80 text-xs sm:text-sm tracking-widest mb-3 uppercase">一段跨越城市與山的旅程，一次時間與記憶的收藏 | 久違的我們，一起出發
         </p>
-        <p class="text-green-100 opacity-80 text-xs sm:text-sm tracking-widest mb-3 uppercase">久違的我們，一起出發 </p>
-        <p class="text-green-100 opacity-50 text-xs sm:text-sm tracking-widest mb-3 uppercase">Tokyo · Yokohama · Hakone
-            · Mt. Fuji</p>
+        <p class="text-green-100 opacity-50 text-xs sm:text-sm tracking-widest mb-3 uppercase">2026 · Tokyo · Hakone · Mt. Fuji</p>
 
         <div class="flight-info rounded-2xl p-4 sm:p-5 max-w-sm mx-auto text-xs sm:text-sm shadow-inner">
             <div class="flex justify-between items-center mb-3">
-                <span class="font-bold opacity-90"><i class="fas fa-plane-departure mr-2"></i>6/14 去程 CI 100</span>
-                <span class="font-mono whitespace-nowrap">09:30 ➔ 13:30</span>
+                <span class="font-bold opacity-90"><i class="fas fa-plane-departure mr-2"></i>6/14 去程 華航 CI100</span>
+                <span class="font-mono whitespace-nowrap">08:50 ➔ 13:15</span>
             </div>
             <div class="flex justify-between items-center border-t border-white/20 pt-3">
-                <span class="font-bold opacity-90"><i class="fas fa-plane-arrival mr-2"></i>6/20 回程 CI 101</span>
+                <span class="font-bold opacity-90"><i class="fas fa-plane-arrival mr-2"></i>6/20 回程 華航 CI101</span>
                 <span class="font-mono whitespace-nowrap">14:30 ➔ 17:15</span>
-            </div>
-            <div class="text-[10px] sm:text-xs opacity-80 mt-3">
-                <i class="fas fa-circle-info mr-2"></i>本次航班：華航 TPE ⇄ NRT
             </div>
 
         </div>
@@ -272,72 +326,79 @@
 
     <div class="max-w-2xl mx-auto content-padding px-6 space-y-10">
 
-        <section class="card p-6 sm:p-8 text-center relative overflow-hidden border-2 border-yellow-100">
-            <div class="absolute top-0 right-0 p-4 opacity-20">
-                <i class="fas fa-birthday-cake text-5xl text-yellow-600"></i>
-            </div>
-            <h2 class="serif text-xl sm:text-xl text-green-800 mb-4 font-bold">🎂 慶生特別企劃</h2>
-            <p class="text-sm sm:text-base text-gray-600 leading-relaxed mb-6">
-                這是我們家第一次驚喜的 6 人大團體旅行！除了享受東京與箱根的芬多精，
-                最重要的任務就是慶祝爸媽的生日。在富士山的見證下，願全家人都能擁有最溫暖的 7 天回憶。
-            </p>
-            <div class="flex flex-wrap justify-center gap-2 text-[10px] font-bold text-green-700">
-                <span class="tag-forest px-3 py-1 rounded-full italic">#FamilyFirst</span>
-                <span class="tag-forest px-3 py-1 rounded-full italic">#ParentsBirthday</span>
-                <span class="tag-forest px-3 py-1 rounded-full italic">#6PeopleGroup</span>
-            </div>
-        </section>
-
-        <!-- Plan Switch -->
-        <div class="flex justify-center gap-3 mb-6 text-xs font-bold">
-            <button onclick="showPlan('A')" id="btnA"
-                class="px-4 py-2 rounded-full bg-green-700 text-white shadow active:scale-[0.99] transition">
-                方案 A｜市區 ➜ 箱根
-            </button>
-            <button onclick="showPlan('B')" id="btnB"
-                class="px-4 py-2 rounded-full bg-white text-green-800 border border-green-700 active:scale-[0.99] transition">
-                方案 B｜箱根 ➜ 市區
-            </button>
-        </div>
-
-
-        <div id="planA" class="space-y-8 relative">
+        <div id="planB" class="space-y-8 relative">
             <div class="absolute top-0 bottom-0 timeline-line -z-10"></div>
+
+            <!-- Day 0 -->
+            <div class="relative">
+                <div class="timeline-node gray"></div>
+                <section class="card itin-card p-5 sm:p-6 border-l-8 border-gray-400 card-ml ml-8 relative">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <div>
+                            <h2 class="text-lg sm:text-xl font-bold text-gray-800">Day 0 | 出發前夜</h2>
+                            <div class="mt-2">
+                                <span class="chip"><i class="fas fa-plane-departure"></i> 桃園機場凱悅酒店</span>
+                                <span class="ml-2 text-[11px] text-gray-400 font-bold">輕鬆入住・準備啟程</span>
+                            </div>
+                        </div>
+                        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/13
+                            (六)</span>
+                    </div>
+
+                    <div class="ml-1 border-l-2 border-gray-100 pl-4">
+                        <h3 class="font-bold accent-wood text-sm mb-2">🛫 出發前暖身</h3>
+                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                            <li>入住桃園機場凱悅酒店（Hyatt Regency Taoyuan Airport）</li>
+                            <li>提早休息，隔天舒服出發前往日本</li>
+                        </ul>
+                    </div>
+
+                    <div
+                        class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
+                        <span>🏠 住宿：<u><a href="https://maps.app.goo.gl/xPqhmjmGksxAUxUj7" target="_blank" rel="noopener noreferrer">桃園機場凱悅酒店</a></u></span>
+                        <span>📍 Taoyuan Airport</span>
+                    </div>
+                </section>
+            </div>
 
             <!-- Day 1 -->
             <div class="relative">
-                <div class="timeline-node"></div>
-                <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-700 card-ml ml-8 relative">
-                    <div class="flex items-start justify-between gap-3 mb-4 day-head">
+                <div class="timeline-node yellow"></div>
+                <section
+                    class="card itin-card p-5 sm:p-6 border-l-8 border-yellow-600 card-ml ml-8 relative bg-yellow-50/10">
+                    <div class="flex items-start justify-between gap-3 mb-4">
                         <div>
-                            <h2 class="font-bold text-green-800 day-title">Day 1 | 夢想啟航</h2>
+                            <h2 class="text-lg sm:text-xl font-bold text-yellow-800">Day 1 | 抵達 ➜ 直奔箱根</h2>
                             <div class="mt-2">
-                                <span class="chip"><i class="fas fa-train"></i> NRT → Skyliner → 上野 → 淺草</span>
-                                <span class="ml-2 text-[11px] text-gray-400 font-bold">約 40–45 分＋地鐵</span>
+                                <span class="chip"><i class="fas fa-plane"></i> NRT ➜ 東京 ➜ 箱根</span>
+                                <span class="ml-2 text-[11px] text-gray-400 font-bold">移動日：行程放鬆</span>
                             </div>
                         </div>
                         <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/14
                             (日)</span>
                     </div>
 
-                    <div class="ml-1 border-l-2 border-gray-100 pl-4">
-                        <h3 class="font-bold accent-wood text-sm mb-2">🏮 淺草寺慶生暖身</h3>
-                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                            <li>雷門＋仲見世通散步，避開正午人潮</li>
-                            <li>拍第一張 6 人合照，先把「全員到齊」儀式感做滿</li>
-                        </ul>
+                    <div
+                        class="bg-green-700 text-white p-4 rounded-xl mb-4 text-[10px] sm:text-xs leading-relaxed shadow-lg">
+                        <i class="fas fa-circle-info mr-2"></i>
+                        租車自駕前往箱根
+                    </div>
 
-                        <h3 class="font-bold accent-wood text-sm mt-5 mb-2">🌌 隅田川與晴空塔</h3>
-                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                            <li>晚餐：淺草老牌定食（長輩友善）</li>
-                            <li>飯後隅田川散步，遠眺晴空塔夜景</li>
-                        </ul>
+                    <div class="ml-1 border-l-2 border-yellow-200 pl-4 space-y-4">
+                        <div>
+                            <h3 class="font-bold text-yellow-900 text-sm mb-2">♨️ 第一晚就進溫泉模式</h3>
+                            <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                                <li>Check-in 後換泡湯、吃晚餐</li>
+                                <li>調時差：早睡，隔天精神滿滿環遊箱根</li>
+                            </ul>
+                        </div>
+                        
                     </div>
 
                     <div
                         class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-                        <span>🏠 住宿：東京家庭式旅館</span>
-                        <span>📍 Asakusa Area</span>
+                        <span>🏠 住宿：<u><a href="https://maps.app.goo.gl/U6cGPbTrSVfReBf76" target="_blank" rel="noopener noreferrer">Rakuten STAY VILLA 箱根</a></u></span>
+                        <span>📍 Hakone Area</span>
                     </div>
                 </section>
             </div>
@@ -345,41 +406,37 @@
             <!-- Day 2 -->
             <div class="relative">
                 <div class="timeline-node"></div>
-                <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-600 card-ml ml-8 relative">
-                    <div class="flex items-start justify-between gap-3 mb-4 day-head">
+                <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-700 card-ml ml-8 relative">
+                    <div class="flex items-start justify-between gap-3 mb-4">
                         <div>
-                            <h2 class="font-bold text-green-800 day-title">Day 2 | 漫步林蔭</h2>
+                            <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 2 | 箱根環遊</h2>
                             <div class="mt-2">
-                                <span class="chip"><i class="fas fa-subway"></i> 市區電車移動</span>
-                                <span class="ml-2 text-[11px] text-gray-400 font-bold">散步＋逛街日</span>
+                                <span class="chip"><i class="fas fa-mountain"></i> 纜車・湖・神社</span>
+                                <span class="ml-2 text-[11px] text-gray-400 font-bold">交通工具串景點</span>
                             </div>
                         </div>
                         <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/15
                             (一)</span>
                     </div>
 
-                    <div class="ml-1 border-l-2 border-gray-100 pl-4 space-y-5">
-                        <div>
-                            <h3 class="font-bold accent-wood text-sm mb-2">🌳 上野公園 ➔ 阿美橫町</h3>
-                            <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                                <li>公園散步＋補充綠意</li>
-                                <li>阿美橫町逛市場（伴手禮/藥妝主戰場）</li>
-                            </ul>
-                        </div>
+                    <div class="ml-1 border-l-2 border-gray-100 pl-4">
+                        <h3 class="font-bold accent-wood text-sm mb-2">🌋 大涌谷 & 🚢 海賊船</h3>
+                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                            <li>搭纜車上山＋黑玉子：象徵長命百歲</li>
+                            <li>蘆之湖遊船：景色超值、走路量低</li>
+                        </ul>
 
-                        <div>
-                            <h3 class="font-bold accent-wood text-sm mb-2">🛍 銀座繁華與新宿夜景</h3>
-                            <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                                <li>銀座質感商圈：逛街＋咖啡廳休息</li>
-                                <li>新宿都廳免費展望台：城市森林夜色</li>
-                            </ul>
-                        </div>
+                        <h3 class="font-bold accent-wood text-sm mt-5 mb-2">⛩ 箱根神社水上鳥居</h3>
+                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                            <li>鳥居合影：最有「箱根感」的一張照片</li>
+                            <li>回旅館泡湯收工，晚餐吃一波燒烤</li>
+                        </ul>
                     </div>
 
                     <div
                         class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-                        <span>🏠 住宿：東京家庭式旅館</span>
-                        <span>📍 Asakusa Area</span>
+                        <span>🏠 住宿：<u><a href="https://maps.app.goo.gl/U6cGPbTrSVfReBf76" target="_blank" rel="noopener noreferrer">Rakuten STAY VILLA 箱根</a></u></span>
+                        <span>📍 Hakone Area</span>
                     </div>
                 </section>
             </div>
@@ -387,87 +444,85 @@
             <!-- Day 3 -->
             <div class="relative">
                 <div class="timeline-node"></div>
-                <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-500 card-ml ml-8 relative">
-                    <div class="flex items-start justify-between gap-3 mb-4 day-head">
+                <section
+                    class="card itin-card p-5 sm:p-6 border-l-8 border-green-500 card-ml ml-8 relative border-2 border-green-50">
+                    <div class="flex items-start justify-between gap-3 mb-4">
                         <div>
-                            <h2 class="font-bold text-green-800 day-title">Day 3 | 海風漫步</h2>
+                            <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 3 | <i
+                                    class="fas fa-mountain mr-1"></i>富士山日</h2>
                             <div class="mt-2">
-                                <span class="chip"><i class="fas fa-train"></i> 東京 ⇄ 橫濱</span>
-                                <span class="ml-2 text-[11px] text-gray-400 font-bold">最輕鬆回血日</span>
+                                <span class="chip"><i class="fas fa-location-dot"></i> 箱根 ➜ 河口湖</span>
+                                <span class="ml-2 text-[11px] text-gray-400 font-bold">拍照＋散步</span>
                             </div>
                         </div>
                         <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/16
                             (二)</span>
                     </div>
 
-                    <div class="ml-1 border-l-2 border-gray-100 pl-4">
-                        <h3 class="font-bold accent-wood text-sm mb-2">🚡 橫濱空中纜車 Air Cabin</h3>
+                    <div class="ml-1 border-l-2 border-green-100 pl-4">
+                        <h3 class="font-bold accent-wood text-sm mb-2">🗻 河口湖畔漫步</h3>
                         <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                            <li>透明纜車跨越運河，少走路也能看海港</li>
-                            <li>紅磚倉庫散步：港都氛圍滿分</li>
+                            <li>大石公園：湖畔花景＋富士山（看天氣）</li>
+                            <li>忍野八海／音樂盒之森（二選一慢慢走）</li>
                         </ul>
 
-                        <h3 class="font-bold accent-wood text-sm mt-5 mb-2">🥟 橫濱中華街午餐</h3>
-                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                            <li>點心熱食最友善，大家都能吃得舒服</li>
-                            <li>下午自由：咖啡/海邊/拍照慢慢來</li>
-                        </ul>
-                    </div>
-
-                    <div
-                        class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-                        <span>🏠 住宿：東京家庭式旅館</span>
-                        <span>📍 Asakusa Area</span>
-                    </div>
-                </section>
-            </div>
-
-            <!-- Day 4 -->
-            <div class="relative">
-                <div class="timeline-node yellow"></div>
-                <section
-                    class="card itin-card p-5 sm:p-6 border-l-8 border-yellow-600 card-ml ml-8 relative bg-yellow-50/10">
-                    <div class="flex items-start justify-between gap-3 mb-4 day-head">
-                        <div>
-                            <h2 class="font-bold text-yellow-800 day-title">Day 4 | 自駕 ➔ 溫泉</h2>
-                            <div class="mt-2">
-                                <span class="chip"><i class="fas fa-car"></i> 新宿取車 → 箱根</span>
-                                <span class="ml-2 text-[11px] text-gray-400 font-bold">開始山林模式</span>
-                            </div>
-                        </div>
-                        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/17
-                            (三)</span>
-                    </div>
-
-                    <div
-                        class="bg-green-700 text-white p-4 rounded-xl mb-4 text-[10px] sm:text-xs leading-relaxed shadow-lg">
-                        <i class="fas fa-car mr-2"></i>
-                        <strong>7 人座（Alphard / Noah / Voxy 同級）取車</strong><br>
-                        6 人出遊首選！新宿取車後開往箱根，展開自由的自駕之旅。
-                    </div>
-
-                    <div class="ml-1 border-l-2 border-yellow-200 pl-4 space-y-4">
-                        <div>
-                            <h3 class="font-bold text-yellow-900 text-sm mb-2">🛍 御殿場 Outlet（選擇）</h3>
-                            <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                                <li>遠眺富士山（看天氣）＋替爸媽挑生日禮物</li>
-                                <li>前往箱根 Check-in，晚上只做一件事：泡湯</li>
-                            </ul>
-                        </div>
-
-                        <div class="bg-white p-3 rounded-lg border border-yellow-200">
-                            <h3 class="font-bold text-red-700 text-xs italic mb-1"><i class="fas fa-star mr-1"></i> 生日之夜
-                                (Part 1)</h3>
+                        <div class="bg-green-50 p-3 rounded-lg border border-green-100 mt-4">
+                            <h3 class="font-bold text-green-800 text-xs italic mb-1"><i class="fas fa-gift mr-1"></i>
+                                生日之夜</h3>
                             <p class="text-[10px] sm:text-xs text-gray-600 leading-relaxed">
-                                換上浴衣，享用精緻會席料理。第一個慶生高潮登場！
+                                會席料理＋溫泉的完美組合。
                             </p>
                         </div>
                     </div>
 
                     <div
                         class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-                        <span>🏠 住宿：箱根溫泉旅館</span>
-                        <span>📍 Hakone Area</span>
+                        <span>🏠 住宿：<u><a href="https://maps.app.goo.gl/Sb93mhYhMBCRnKek7" target="_blank" rel="noopener noreferrer">秀峰閣湖月</a></u></span>
+                        <span>📍 Kawaguchiko Area</span>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Day 4 -->
+            <div class="relative">
+                <div class="timeline-node"></div>
+                <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-700 card-ml ml-8 relative">
+                    <div class="flex items-start justify-between gap-3 mb-4">
+                        <div>
+                            <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 4 | 河口湖慢遊 ➜ 東京</h2>
+                            <div class="mt-2">
+                                <span class="chip"><i class="fas fa-car"></i> 河口湖 ➜ 東京（下午回程）</span>
+                                <span class="ml-2 text-[11px] text-gray-400 font-bold">白天湖畔慢遊</span>
+                            </div>
+                        </div>
+                        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/17
+                            (三)</span>
+                    </div>
+                    <div
+                        class="bg-green-700 text-white p-4 rounded-xl mb-4 text-[10px] sm:text-xs leading-relaxed shadow-lg">
+                        <i class="fas fa-circle-info mr-2"></i>
+                        回到東京還車
+                    </div>
+                    <div class="ml-1 border-l-2 border-gray-100 pl-4">
+                        <h3 class="font-bold accent-wood text-sm mb-2">🗻 河口湖湖畔慢慢晃</h3>
+                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                            <li>早上可再去湖畔散步、補拍富士山，或找間景觀咖啡廳坐坐</li>
+                            <li>中午在河口湖周邊吃完再出發，讓移動日不要太趕</li>
+                        </ul>
+
+                        <h3 class="font-bold accent-wood text-sm mt-5 mb-2">🌆 傍晚回到東京</h3>
+                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                            <li>下午開車回東京、還車後入住飯店</li>
+                            <li>晚上可輕鬆散步淺草／晴空塔周邊，早點休息補體力</li>
+                        </ul>
+
+                        <div class="photo-placeholder"><i class="fas fa-camera-retro"></i><span>Photo Spot · 河口湖晨景 / 富士山補拍 / 東京夜景首張照片</span></div>
+                    </div>
+
+                    <div
+                        class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
+                        <span>🏠 住宿：東京住宿（待訂）</span>
+                        <span>📍 Tokyo Area</span>
                     </div>
                 </section>
             </div>
@@ -475,37 +530,43 @@
             <!-- Day 5 -->
             <div class="relative">
                 <div class="timeline-node"></div>
-                <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-700 card-ml ml-8 relative">
-                    <div class="flex items-start justify-between gap-3 mb-4 day-head">
+                <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-600 card-ml ml-8 relative">
+                    <div class="flex items-start justify-between gap-3 mb-4">
                         <div>
-                            <h2 class="font-bold text-green-800 day-title">Day 5 | 箱根環遊</h2>
+                            <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 5 | 東京買爆日</h2>
                             <div class="mt-2">
-                                <span class="chip"><i class="fas fa-mountain"></i> 纜車・湖・神社</span>
-                                <span class="ml-2 text-[11px] text-gray-400 font-bold">交通工具串景點</span>
+                                <span class="chip"><i class="fas fa-bag-shopping"></i> 上野・阿美橫町 / 新宿 / 銀座</span>
+                                <span class="ml-2 text-[11px] text-gray-400 font-bold">補貨＋退稅日</span>
                             </div>
                         </div>
                         <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/18
                             (四)</span>
                     </div>
 
-                    <div class="ml-1 border-l-2 border-gray-100 pl-4">
-                        <h3 class="font-bold accent-wood text-sm mb-2">🌋 大涌谷 & 🚢 海賊船</h3>
-                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                            <li>纜車上山＋黑玉子：象徵長命百歲</li>
-                            <li>蘆之湖遊船：幾乎不用走路，風景超值</li>
-                        </ul>
+                    <div class="ml-1 border-l-2 border-gray-100 pl-4 space-y-5">
+                        <div>
+                            <h3 class="font-bold accent-wood text-sm mb-2">🛍 上野公園 ➔ 阿美橫町</h3>
+                            <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                                <li>藥妝/零食/小禮盒：集中掃貨最省力</li>
+                                <li>走累就咖啡廳休息：節奏由大家決定</li>
+                            </ul>
+                        </div>
 
-                        <h3 class="font-bold accent-wood text-sm mt-5 mb-2">⛩ 箱根神社水上鳥居</h3>
-                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                            <li>湖畔鳥居合影：最有「箱根感」的一張照片</li>
-                            <li>晚上回旅館泡湯收工</li>
-                        </ul>
+                        <div>
+                            <h3 class="font-bold accent-wood text-sm mb-2">🌃 新宿 & 銀座</h3>
+                            <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                                <li>新宿可先逛百貨、看都廳夜景，或直接安排一餐燒肉慶功</li>
+                                <li>銀座百貨補齊高質感禮盒，把退稅和最後採買集中處理</li>
+                            </ul>
+                        </div>
+
+                        <div class="photo-placeholder"><i class="fas fa-camera-retro"></i><span>Photo Spot · 阿美橫町戰利品 / 新宿夜景 / 銀座街景</span></div>
                     </div>
 
                     <div
                         class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-                        <span>🏠 住宿：箱根溫泉旅館</span>
-                        <span>📍 Hakone Area</span>
+                        <span>🏠 住宿：東京住宿（待訂）</span>
+                        <span>📍 Tokyo Area</span>
                     </div>
                 </section>
             </div>
@@ -513,40 +574,39 @@
             <!-- Day 6 -->
             <div class="relative">
                 <div class="timeline-node"></div>
-                <section
-                    class="card itin-card p-5 sm:p-6 border-l-8 border-green-500 card-ml ml-8 relative border-2 border-green-50">
-                    <div class="flex items-start justify-between gap-3 mb-4 day-head">
+                <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-500 card-ml ml-8 relative">
+                    <div class="flex items-start justify-between gap-3 mb-4">
                         <div>
-                            <h2 class="font-bold text-green-800 day-title">Day 6 | 富士慶生</h2>
+                            <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 6 | 東京慢遊</h2>
                             <div class="mt-2">
-                                <span class="chip"><i class="fas fa-location-dot"></i> 箱根 ⇄ 河口湖（視天氣）</span>
-                                <span class="ml-2 text-[11px] text-gray-400 font-bold">富士山加成日</span>
+                                <span class="chip"><i class="fas fa-city"></i> 東京自由探索</span>
+                                <span class="ml-2 text-[11px] text-gray-400 font-bold">城市散步日</span>
                             </div>
                         </div>
                         <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/19
                             (五)</span>
                     </div>
 
-                    <div class="ml-1 border-l-2 border-green-100 pl-4">
-                        <h3 class="font-bold accent-wood text-sm mb-2">🗻 河口湖畔漫步</h3>
+                    <div class="ml-1 border-l-2 border-gray-100 pl-4">
+                        <h3 class="font-bold accent-wood text-sm mb-2">🌳 明治神宮 & 代代木公園</h3>
                         <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-                            <li>大石公園湖畔花景（視花期可能有薰衣草）</li>
-                            <li>忍野八海／音樂盒之森（二選一慢慢走）</li>
+                            <li>早上走神宮與綠地，節奏輕鬆又有旅行收尾感</li>
+                            <li>想更悠哉的話，也可以改成表參道咖啡廳慢慢坐</li>
                         </ul>
 
-                        <div class="bg-green-50 p-3 rounded-lg border border-green-100 mt-4">
-                            <h3 class="font-bold text-green-800 text-xs italic mb-1"><i class="fas fa-gift mr-1"></i>
-                                Happy Birthday, Parents!</h3>
-                            <p class="text-[10px] sm:text-xs text-gray-600 leading-relaxed">
-                                最後一晚溫泉，準備小蛋糕驚喜。感謝爸媽辛苦帶我們環遊世界，這是最美的回憶。
-                            </p>
-                        </div>
+                        <h3 class="font-bold accent-wood text-sm mt-5 mb-2">🛍 原宿・澀谷收尾</h3>
+                        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
+                            <li>原宿／表參道自由逛街，補買最後想帶回家的東西</li>
+                            <li>晚上到澀谷十字路口或 Shibuya Sky，看東京最後一晚夜景</li>
+                        </ul>
+
+                        <div class="photo-placeholder"><i class="fas fa-camera-retro"></i><span>Photo Spot · 明治神宮綠意 / 原宿街景 / 澀谷夜景</span></div>
                     </div>
 
                     <div
                         class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-                        <span>🏠 住宿：箱根溫泉旅館</span>
-                        <span>📍 Hakone Area</span>
+                        <span>🏠 住宿：東京住宿（待訂）</span>
+                        <span>📍 Tokyo Area</span>
                     </div>
                 </section>
             </div>
@@ -555,9 +615,9 @@
             <div class="relative">
                 <div class="timeline-node gray"></div>
                 <section class="card itin-card p-5 sm:p-6 border-l-8 border-gray-400 card-ml ml-8 relative">
-                    <div class="flex items-start justify-between gap-3 mb-4 day-head">
+                    <div class="flex items-start justify-between gap-3 mb-4">
                         <div>
-                            <h2 class="font-bold text-gray-800 day-title">Day 7 | 溫馨回首</h2>
+                            <h2 class="text-lg sm:text-xl font-bold text-gray-800">Day 7 | 回程</h2>
                             <div class="mt-2">
                                 <span class="chip"><i class="fas fa-plane"></i> 回程日（成田 NRT）</span>
                                 <span class="ml-2 text-[11px] text-gray-400 font-bold">提早出發最安心</span>
@@ -570,9 +630,8 @@
                     <div class="bg-amber-50 p-3 rounded-xl border border-amber-100">
                         <p class="text-[10px] font-bold text-amber-900 mb-2 uppercase text-center">⏰ 返程關鍵時鐘</p>
                         <ul class="text-[10px] text-amber-800 space-y-1">
-                            <li class="flex justify-between"><span>07:00</span><span>享受旅館早餐</span></li>
-                            <li class="flex justify-between"><span>08:00</span><span><b>退房離開箱根</b>（防塞車）</span></li>
-                            <li class="flex justify-between"><span>11:00</span><span>市區還車 & 最後午餐</span></li>
+                            <li class="flex justify-between"><span>07:00</span><span>最後早餐 & 整理行李</span></li>
+                            <li class="flex justify-between"><span>09:30</span><span><b>出發前往成田</b>（防塞車）</span></li>
                             <li class="flex justify-between"><span>12:00</span><span><b>抵達成田機場報到</b></span></li>
                             <li class="flex justify-between"><span>14:30</span><span>飛機起飛（CI 101）</span></li>
                         </ul>
@@ -586,276 +645,29 @@
 
         </div>
 
+        <section class="widget-card p-6 sm:p-7">
+            <div class="flex items-center justify-between gap-3 mb-4 flex-wrap">
+                <h3 class="font-bold text-green-800 text-base sm:text-lg"><i class="fas fa-bars-progress mr-2"></i>行程進度感</h3>
+                <span class="text-[11px] text-gray-400 font-bold">Day 0 → Day 7</span>
+            </div>
 
-        
+            <div class="space-y-4">
+                <div>
+                    <div class="flex justify-between text-xs text-gray-600 mb-1"><span>Day 0–2 山林暖身</span><span>38%</span></div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 38%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs text-gray-600 mb-1"><span>Day 3–4 富士山 → 東京切換</span><span>68%</span></div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 68%"></div></div>
+                </div>
+                <div>
+                    <div class="flex justify-between text-xs text-gray-600 mb-1"><span>Day 5–7 東京收尾</span><span>100%</span></div>
+                    <div class="progress-track"><div class="progress-fill" style="width: 100%"></div></div>
+                </div>
+            </div>
+        </section>
 
-<div id="planB" class="space-y-8 relative hidden">
-  <div class="absolute top-0 bottom-0 timeline-line -z-10"></div>
-
-  <!-- Day 1 -->
-  <div class="relative">
-    <div class="timeline-node yellow"></div>
-    <section class="card itin-card p-5 sm:p-6 border-l-8 border-yellow-600 card-ml ml-8 relative bg-yellow-50/10">
-      <div class="flex items-start justify-between gap-3 mb-4">
-        <div>
-          <h2 class="text-lg sm:text-xl font-bold text-yellow-800">Day 1 | 抵達 ➜ 直奔箱根</h2>
-          <div class="mt-2">
-            <span class="chip"><i class="fas fa-car"></i> NRT ➜ 新宿取車 ➜ 箱根</span>
-            <span class="ml-2 text-[11px] text-gray-400 font-bold">移動日：行程放鬆</span>
-          </div>
-        </div>
-        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/14 (日)</span>
-      </div>
-
-      <div class="bg-green-700 text-white p-4 rounded-xl mb-4 text-[10px] sm:text-xs leading-relaxed shadow-lg">
-        <i class="fas fa-circle-info mr-2"></i>
-        建議 Day 1 <b>不要硬塞景點</b>：成田落地後先補給（便利店/簡餐）→ 直奔箱根泡湯最爽。
-      </div>
-
-      <div class="ml-1 border-l-2 border-yellow-200 pl-4 space-y-4">
-        <div>
-          <h3 class="font-bold text-yellow-900 text-sm mb-2">♨️ 第一晚就進溫泉模式</h3>
-          <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-            <li>Check-in 後換浴衣、泡湯、會席料理</li>
-            <li>調時差：早睡，隔天精神滿滿環遊箱根</li>
-          </ul>
-        </div>
-        <div class="bg-white p-3 rounded-lg border border-yellow-200">
-          <h3 class="font-bold text-red-700 text-xs italic mb-1"><i class="fas fa-star mr-1"></i> 生日之夜 (Part 1)</h3>
-          <p class="text-[10px] sm:text-xs text-gray-600 leading-relaxed">
-            把第一個小驚喜放在溫泉旅館：蛋糕/卡片/全家合照，一進日本就有儀式感。
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-        <span>🏠 住宿：箱根溫泉旅館</span>
-        <span>📍 Hakone Area</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- Day 2 -->
-  <div class="relative">
-    <div class="timeline-node"></div>
-    <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-700 card-ml ml-8 relative">
-      <div class="flex items-start justify-between gap-3 mb-4">
-        <div>
-          <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 2 | 箱根環遊</h2>
-          <div class="mt-2">
-            <span class="chip"><i class="fas fa-mountain"></i> 纜車・湖・神社</span>
-            <span class="ml-2 text-[11px] text-gray-400 font-bold">交通工具串景點</span>
-          </div>
-        </div>
-        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/15 (一)</span>
-      </div>
-
-      <div class="ml-1 border-l-2 border-gray-100 pl-4">
-        <h3 class="font-bold accent-wood text-sm mb-2">🌋 大涌谷 & 🚢 海賊船</h3>
-        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-          <li>搭纜車上山＋黑玉子：象徵長命百歲</li>
-          <li>蘆之湖遊船：景色超值、走路量低</li>
-        </ul>
-
-        <h3 class="font-bold accent-wood text-sm mt-5 mb-2">⛩ 箱根神社水上鳥居</h3>
-        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-          <li>鳥居合影：最有「箱根感」的一張照片</li>
-          <li>回旅館泡湯收工，晚餐再吃一波會席</li>
-        </ul>
-      </div>
-
-      <div class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-        <span>🏠 住宿：箱根溫泉旅館</span>
-        <span>📍 Hakone Area</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- Day 3 -->
-  <div class="relative">
-    <div class="timeline-node"></div>
-    <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-500 card-ml ml-8 relative border-2 border-green-50">
-      <div class="flex items-start justify-between gap-3 mb-4">
-        <div>
-          <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 3 | 富士山日</h2>
-          <div class="mt-2">
-            <span class="chip"><i class="fas fa-location-dot"></i> 箱根 ⇄ 河口湖（視天氣）</span>
-            <span class="ml-2 text-[11px] text-gray-400 font-bold">拍照＋散步</span>
-          </div>
-        </div>
-        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/16 (二)</span>
-      </div>
-
-      <div class="ml-1 border-l-2 border-green-100 pl-4">
-        <h3 class="font-bold accent-wood text-sm mb-2">🗻 河口湖畔漫步</h3>
-        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-          <li>大石公園：湖畔花景＋富士山（看天氣）</li>
-          <li>忍野八海／音樂盒之森（二選一慢慢走）</li>
-        </ul>
-
-        <div class="bg-green-50 p-3 rounded-lg border border-green-100 mt-4">
-          <h3 class="font-bold text-green-800 text-xs italic mb-1"><i class="fas fa-gift mr-1"></i> 生日之夜 (Part 2)</h3>
-          <p class="text-[10px] sm:text-xs text-gray-600 leading-relaxed">
-            若想把重頭戲放在富士山日：今晚準備蛋糕驚喜＋拍一張「全家＋富士山」合照（超有紀念價值）。
-          </p>
-        </div>
-      </div>
-
-      <div class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-        <span>🏠 住宿：箱根溫泉旅館</span>
-        <span>📍 Hakone Area</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- Day 4 -->
-  <div class="relative">
-    <div class="timeline-node"></div>
-    <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-700 card-ml ml-8 relative">
-      <div class="flex items-start justify-between gap-3 mb-4">
-        <div>
-          <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 4 | 回到東京</h2>
-          <div class="mt-2">
-            <span class="chip"><i class="fas fa-car"></i> 箱根 ➜ 東京（還車/入住）</span>
-            <span class="ml-2 text-[11px] text-gray-400 font-bold">午後輕鬆散步</span>
-          </div>
-        </div>
-        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/17 (三)</span>
-      </div>
-
-      <div class="ml-1 border-l-2 border-gray-100 pl-4">
-        <h3 class="font-bold accent-wood text-sm mb-2">🏮 淺草寺 & 仲見世通</h3>
-        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-          <li>入住後先走最經典的一區：景點密集、節奏可快可慢</li>
-          <li>伴手禮先小買一輪：邊走邊鎖定最後兩天要買爆的清單</li>
-        </ul>
-
-        <h3 class="font-bold accent-wood text-sm mt-5 mb-2">🌌 隅田川與晴空塔</h3>
-        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-          <li>晚餐：淺草周邊定食/鰻魚/天婦羅（長輩友善）</li>
-          <li>飯後散步看夜景，回飯店早睡補體力</li>
-        </ul>
-      </div>
-
-      <div class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-        <span>🏠 住宿：東京家庭式旅館</span>
-        <span>📍 Asakusa Area</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- Day 5 -->
-  <div class="relative">
-    <div class="timeline-node"></div>
-    <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-600 card-ml ml-8 relative">
-      <div class="flex items-start justify-between gap-3 mb-4">
-        <div>
-          <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 5 | 東京買爆日</h2>
-          <div class="mt-2">
-            <span class="chip"><i class="fas fa-bag-shopping"></i> 上野・阿美橫町 / 銀座 / 新宿</span>
-            <span class="ml-2 text-[11px] text-gray-400 font-bold">補貨＋退稅日</span>
-          </div>
-        </div>
-        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/18 (四)</span>
-      </div>
-
-      <div class="ml-1 border-l-2 border-gray-100 pl-4 space-y-5">
-        <div>
-          <h3 class="font-bold accent-wood text-sm mb-2">🛍 上野公園 ➔ 阿美橫町</h3>
-          <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-            <li>藥妝/零食/小禮盒：集中掃貨最省力</li>
-            <li>走累就咖啡廳休息：節奏由長輩決定</li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 class="font-bold accent-wood text-sm mb-2">🏙 銀座 & 新宿夜景</h3>
-          <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-            <li>銀座百貨：高質感禮盒、退稅集中處理</li>
-            <li>新宿都廳展望台：免費夜景收尾（或改吃燒肉慶功）</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-        <span>🏠 住宿：東京家庭式旅館</span>
-        <span>📍 Asakusa Area</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- Day 6 -->
-  <div class="relative">
-    <div class="timeline-node"></div>
-    <section class="card itin-card p-5 sm:p-6 border-l-8 border-green-500 card-ml ml-8 relative">
-      <div class="flex items-start justify-between gap-3 mb-4">
-        <div>
-          <h2 class="text-lg sm:text-xl font-bold text-green-800">Day 6 | 橫濱散步</h2>
-          <div class="mt-2">
-            <span class="chip"><i class="fas fa-train"></i> 東京 ⇄ 橫濱</span>
-            <span class="ml-2 text-[11px] text-gray-400 font-bold">海港輕鬆日</span>
-          </div>
-        </div>
-        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/19 (五)</span>
-      </div>
-
-      <div class="ml-1 border-l-2 border-gray-100 pl-4">
-        <h3 class="font-bold accent-wood text-sm mb-2">🚡 橫濱空中纜車 Air Cabin</h3>
-        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-          <li>透明纜車跨越運河：少走路也能看海港</li>
-          <li>紅磚倉庫散步：港都氛圍滿分</li>
-        </ul>
-
-        <h3 class="font-bold accent-wood text-sm mt-5 mb-2">🥟 橫濱中華街午餐</h3>
-        <ul class="list-dot text-xs sm:text-sm text-gray-600 leading-relaxed space-y-2">
-          <li>點心熱食最友善，大家都能吃得舒服</li>
-          <li>下午自由：咖啡/海邊/拍照慢慢來</li>
-        </ul>
-      </div>
-
-      <div class="mt-4 pt-4 subtle-divider flex items-center justify-between text-[9px] text-gray-400 font-bold uppercase tracking-widest">
-        <span>🏠 住宿：東京家庭式旅館</span>
-        <span>📍 Asakusa Area</span>
-      </div>
-    </section>
-  </div>
-
-  <!-- Day 7 -->
-  <div class="relative">
-    <div class="timeline-node gray"></div>
-    <section class="card itin-card p-5 sm:p-6 border-l-8 border-gray-400 card-ml ml-8 relative">
-      <div class="flex items-start justify-between gap-3 mb-4">
-        <div>
-          <h2 class="text-lg sm:text-xl font-bold text-gray-800">Day 7 | 回程</h2>
-          <div class="mt-2">
-            <span class="chip"><i class="fas fa-plane"></i> 回程日（成田 NRT）</span>
-            <span class="ml-2 text-[11px] text-gray-400 font-bold">提早出發最安心</span>
-          </div>
-        </div>
-        <span class="tag-forest px-2 py-1 rounded-full text-[10px] font-bold whitespace-nowrap">6/20 (六)</span>
-      </div>
-
-      <div class="bg-amber-50 p-3 rounded-xl border border-amber-100">
-        <p class="text-[10px] font-bold text-amber-900 mb-2 uppercase text-center">⏰ 返程關鍵時鐘</p>
-        <ul class="text-[10px] text-amber-800 space-y-1">
-          <li class="flex justify-between"><span>07:00</span><span>最後早餐 & 整理行李</span></li>
-          <li class="flex justify-between"><span>09:30</span><span><b>出發前往成田</b>（防塞車）</span></li>
-          <li class="flex justify-between"><span>12:00</span><span><b>抵達成田機場報到</b></span></li>
-          <li class="flex justify-between"><span>14:30</span><span>飛機起飛（CI 101）</span></li>
-        </ul>
-        <p class="text-[10px] text-amber-800 mt-3 leading-relaxed">
-          <i class="fas fa-circle-info mr-1"></i>
-          小提醒：本次為<b>成田 NRT</b>，建議比平常再提早出發（尖峰或雨天可再多抓 30–60 分鐘）。
-        </p>
-      </div>
-    </section>
-  </div>
-
-</div>
-
-    </div>
-
-    <div class="card p-6 forest-gradient mt-8 shadow-xl">
+        <div class="card p-6 forest-gradient mt-8 shadow-xl">
             <h3 class="font-bold text-sm mb-4 flex items-center"><i class="fas fa-users mr-2"></i> 首次 6 人出遊必讀</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 text-xs leading-relaxed opacity-95">
                 <div class="bg-white/10 p-3 rounded-lg border border-white/20">
@@ -874,43 +686,12 @@
         </div>
     </div>
 
+
+
     <footer class="text-center mt-12 text-gray-400 text-[10px] italic space-y-2">
         <p>🌿 May this be the most beautiful birthday gift for Parents.</p>
         <p class="opacity-50">#2026ForestTrip #BirthdayAdventure</p>
     </footer>
-
-
-<script>
-  function showPlan(type) {
-    const planA = document.getElementById("planA");
-    const planB = document.getElementById("planB");
-    const btnA = document.getElementById("btnA");
-    const btnB = document.getElementById("btnB");
-
-    if (type === "A") {
-      planA.classList.remove("hidden");
-      planB.classList.add("hidden");
-      btnA.classList.add("bg-green-700", "text-white", "shadow");
-      btnA.classList.remove("bg-white", "text-green-800");
-      btnB.classList.remove("bg-green-700", "text-white", "shadow");
-      btnB.classList.add("bg-white", "text-green-800");
-    } else {
-      planB.classList.remove("hidden");
-      planA.classList.add("hidden");
-      btnB.classList.add("bg-green-700", "text-white", "shadow");
-      btnB.classList.remove("bg-white", "text-green-800");
-      btnA.classList.remove("bg-green-700", "text-white", "shadow");
-      btnA.classList.add("bg-white", "text-green-800");
-    }
-
-    // smooth scroll to itinerary start for better UX on mobile
-    const anchor = planA?.closest(".max-w-2xl") || document.body;
-    window.requestAnimationFrame(() => {
-      const y = document.querySelector("#planA")?.getBoundingClientRect().top ?? 0;
-      window.scrollTo({ top: window.scrollY + y - 90, behavior: "smooth" });
-    });
-  }
-</script>
 
 </body>
 
